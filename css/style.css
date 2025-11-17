@@ -187,7 +187,59 @@ body {
 /*-----END OF SECTION 3-----*/
 
 /*-----SECTION 4-----*/
-/*-----END OF SECTION 3-----*/
+.section-four {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+  height: 100vh;
+  font-family: Krona One;
+  background: #f5eedc;
+}
+
+.section-four-card {
+  width: 100%;
+  display: flex;
+  gap: 60px;
+  padding: 60px;
+  border-radius: 30px;
+  align-items: center;
+}
+.four-left,
+.four-right {
+  color: #f5eedc;
+  width: 650px;
+  height: 650px;
+  background-color: #77204a;
+}
+.left-content,
+.right-content {
+  text-align: center;
+  padding: 40px;
+}
+.section-four-card h2 {
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+.section-four-card p {
+  font-size: 20px;
+  margin-bottom: 80px;
+}
+.section-four-card a {
+  text-decoration: none;
+}
+.cta {
+  font-size: 20px;
+  color: #f5eedc;
+  padding: 25px;
+  border-style: solid;
+  border-radius: 50px;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+.cta:hover {
+  background-color: #f19ac5;
+  transform: scale(1.04);
+}
+/*-----END OF SECTION 4-----*/
 
 /*-----SECTION 5-----*/
 .section-five {
@@ -213,7 +265,7 @@ body {
 }
 
 .section-five-content h2 {
-  font-size: 40px;
+  font-size: 50px;
   letter-spacing: 4px;
   line-height: 1.1;
   margin-bottom: 40px;
@@ -236,7 +288,7 @@ body {
   align-items: center;
   color: #fff7ec;
   font-family: "Krona One", system-ui, sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   letter-spacing: 2px;
   text-transform: uppercase;
   cursor: pointer;
@@ -251,7 +303,7 @@ body {
 }
 
 .faq-icon {
-  font-size: 18px;
+  font-size: 30px;
   transition: transform 0.2s ease;
 }
 
@@ -260,8 +312,8 @@ body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  font-family: "Karla", system-ui, sans-serif;
-  font-size: 14px;
+  font-family: Krona One, system-ui, sans-serif;
+  font-size: 17px;
   line-height: 1.5;
   color: #fff7ec;
 }

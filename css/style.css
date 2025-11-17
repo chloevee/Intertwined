@@ -1,0 +1,367 @@
+:root {
+  --maroon: #77204a;
+  --pink: #f19ac5;
+  --lime: #caef97;
+  --brown: #40270d;
+  --cream: #f5eedc;
+  --sky: #6dcbcd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #77204a;
+  font-family: Krona One;
+}
+/*-----NAV BAR-----*/
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  font-family: Krona One;
+  background: linear-gradient(to bottom, #77204a, rgba(255, 94, 169, 0));
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 7rem;
+  list-style: none;
+}
+
+.nav-left a,
+.nav-right a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.nav-logo img {
+  height: 100px;
+}
+
+/* -------------------- */
+/*    DROPDOWN MENU     */
+/* -------------------- */
+
+.dropdown-parent {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #77204a;
+  padding: 15px 0;
+  list-style: none;
+  border-radius: 12px;
+  min-width: 220px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.25s ease;
+  z-index: 999;
+}
+
+.dropdown li a {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.dropdown li a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.dropdown-parent:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+/*-----END OF NAV BAR-----*/
+
+/*-----SECTION 1-----*/
+.section-one {
+  height: 100vh;
+}
+/*-----END OF SECTION 1-----*/
+
+/*-----SECTION 2-----*/
+.section-two {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+  height: 100vh;
+}
+
+.section-two-card {
+  background: #f8a7c5;
+  width: 100%;
+  display: flex;
+  gap: 60px;
+  padding: 60px;
+  border-radius: 30px;
+  align-items: center;
+  color: #f5eedc;
+}
+
+.blob-shape {
+  display: flex;
+  flex-direction: column;
+}
+
+.blob-shape div {
+  width: 500px;
+  height: 150px;
+  background: #f5eedc;
+  border-radius: 80px;
+}
+
+/* Text block */
+.section-two-content h2 {
+  font-size: 32px;
+  letter-spacing: 4px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.section-two-content p {
+  max-width: 500px;
+  line-height: 1.5;
+  font-size: 17px;
+  margin-bottom: 35px;
+}
+
+.more-link {
+  color: #fff4e8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.more-link:hover {
+  opacity: 0.8;
+}
+/*-----END OF SECTION 2-----*/
+
+/*-----SECTION 3-----*/
+.section-three {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+  height: 100vh;
+  background: #caef97;
+}
+
+.section-three-card {
+  background: #caef97;
+  width: 100%;
+  display: flex;
+  gap: 60px;
+  padding: 60px;
+  border-radius: 30px;
+  align-items: center;
+  color: #77204a;
+}
+.section-three .more-link {
+  color: #77204a;
+}
+/*-----END OF SECTION 3-----*/
+
+/*-----SECTION 4-----*/
+/*-----END OF SECTION 3-----*/
+
+/*-----SECTION 5-----*/
+.section-five {
+  background: #3b1f11; /* dark brown */
+  padding: 80px 0;
+}
+
+.section-five-card {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 70px;
+  overflow: hidden;
+}
+
+.section-five-content {
+  position: relative;
+  z-index: 1;
+  margin-left: auto; /* push content to the right */
+  max-width: 480px;
+  color: #fff7ec;
+  font-family: "Krona One", system-ui, sans-serif;
+}
+
+.section-five-content h2 {
+  font-size: 40px;
+  letter-spacing: 4px;
+  line-height: 1.1;
+  margin-bottom: 40px;
+}
+
+/* FAQ list */
+
+.faq-list {
+  margin-top: 10px;
+}
+
+.faq-item {
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #fff7ec;
+  padding: 14px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff7ec;
+  font-family: "Krona One", system-ui, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.faq-item:focus {
+  outline: none;
+}
+
+.faq-question {
+  text-align: left;
+}
+
+.faq-icon {
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+/* Hidden by default */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  font-family: "Karla", system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff7ec;
+}
+
+.faq-answer p {
+  margin: 10px 0 18px;
+}
+
+/* When the button is active, expand the next .faq-answer */
+.faq-item.active + .faq-answer {
+  max-height: 500px; /* big enough for your longest answer */
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg); /* plus → x */
+}
+/*-----END OF SECTION 3-----*/
+
+/*-----FOOTER-----*/
+.footer {
+  background: #77204a;
+  color: #ffffff;
+  padding: 40px 40px 0;
+  font-family: Krona One, sans-serif;
+}
+
+.footer-inner {
+  margin: 0 auto;
+}
+
+.footer-heading {
+  text-align: center;
+  font-size: 45px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-family: Krona One;
+  font-weight: 300;
+  white-space: nowrap;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.footer-col h3 {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col li {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.footer-col a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  margin-left: auto;
+}
+
+.social-icons {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-divider {
+  border-top: 2px solid #f4d8e8;
+  margin-top: 25px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 8px 0 12px;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/*-----END OF FOOTER-----*/

@@ -1,0 +1,175 @@
+/*------PHONE LAYOUT-------*/
+.team-section {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+/* Left: phone frame */
+.phone-wrapper {
+  width: 320px;
+  max-width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.phone {
+  width: 100%;
+  aspect-ratio: 9 / 19;
+  border-radius: 32px;
+  padding: 14px;
+  background: radial-gradient(circle at top, #a3547c, #914f6a);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(184, 148, 172, 0.4);
+}
+
+/* Fake notch */
+.phone::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 16px;
+  background: #020617;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.phone-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #020617;
+  touch-action: pan-y;
+  /* Allows horizontal swiping without weird scrolling */
+}
+
+.slides {
+  display: flex;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right side: descriptions */
+.details {
+  flex: 1;
+}
+
+.details h2 {
+  font-size: 1.8rem;
+  margin: 0 0 8px;
+}
+
+.details p.subtitle {
+  margin: 0 0 24px;
+  color: #741d2f;
+}
+
+.person-description {
+  display: none;
+  animation: fadeIn 0.25s ease;
+}
+
+.person-description.active {
+  display: block;
+}
+
+.person-description h3 {
+  margin: 0 0 4px;
+  font-size: 1.3rem;
+}
+
+.person-role {
+  margin: 0 0 12px;
+  color: #741d2f;
+  font-size: 0.95rem;
+}
+
+.person-bio {
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.8rem;
+}
+
+.tag {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(172, 8, 122, 0.425);
+  border: 1px solid rgba(114, 19, 63, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .team-section {
+    flex-direction: column;
+  }
+
+  .phone-wrapper {
+    max-width: 100%;
+  }
+}
+
+.wave-wrapper {
+  width: 100%;
+  background: #8a2a52; /* the dark maroon bg */
+  overflow: hidden;
+}
+
+svg {
+  width: 100%;
+}
+
+path {
+  fill: #8a2a52; /* same as bg */
+}
+
+text {
+  fill: #f8d6ce; /* light pink-ish text */
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}

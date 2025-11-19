@@ -17,7 +17,7 @@
       <nav class="nav">
         <ul class="nav-left">
           <li class="dropdown-parent">
-            <a href="#">ABOUT US</a>
+            <a href="about.html">ABOUT US</a>
           </li>
 
           <li class="dropdown-parent">
@@ -80,6 +80,44 @@
 
     <section class="section-three">
       <div class="section-three-card">
+        <!-- Wavy DID YOU KNOW title -->
+        <svg
+          class="section-three-ribbon"
+          viewBox="0 0 1200 260"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <!-- curve that the text will follow -->
+            <path
+              id="didPath"
+              d="M -100 140
+             Q 300 20 600 140
+             T 1300 140"
+            />
+          </defs>
+
+          <!-- ribbon shape -->
+          <path
+            d="M -100 140
+           Q 300 20 600 140
+           T 1300 140
+           L 1300 260
+           L -100 260 Z"
+            fill="#77204A"
+          />
+
+          <!-- curved text -->
+          <text
+            fill="#FFA6D9"
+            font-size="80"
+            font-family="Krona One, system-ui, sans-serif"
+            letter-spacing="10"
+          >
+            <textPath href="#didPath" startOffset="10%">
+              DID YOU KNOW? DID YOU KNOW? DID YOU KNOW?
+            </textPath>
+          </text>
+        </svg>
         <div class="section-three-content">
           <p>
             Communication and the development of relationships are highly
@@ -98,27 +136,43 @@
 
     <section class="section-four">
       <div class="section-four-card">
-        <div class="four-left">
-          <div class="left-content">
-            <h2>WANT TO FIND OUT YOUR ATTACHMENT STYLE?</h2>
-            <p>
-              Ever wondered why you love the way that you do? Why you crave
-              closeness, overthink messages, or sometimes pull away when things
-              get too serious? This short quiz helps you uncover your attachment
-              style.
-            </p>
-            <a href="#" class="cta">Take Our Quiz →</a>
+        <div class="carousel">
+          <div class="carousel-item">
+            <div class="card-content">
+              <h2>WANT TO FIND OUT YOUR ATTACHMENT STYLE?</h2>
+              <p>
+                Ever wondered why you love the way that you do? Why you crave
+                closeness, overthink messages, or sometimes pull away when
+                things get too serious? This short quiz helps you uncover your
+                attachment style.
+              </p>
+              <a href="#" class="cta">TAKE OUR QUIZ →</a>
+            </div>
           </div>
-        </div>
-        <div class="four-right">
-          <div class="right-content">
-            <h2>INTERESTED TO LEARN MORE ABOUT ATTACHMENT STYLES?</h2>
-            <p>
-              See how different attachment styles play out in real-life dating
-              situations, from ______ to _____. Our short comic series brings
-              these experiences to life in a way that’s fun and relatable!
-            </p>
-            <a href="#" class="cta">Read Our Comics →</a>
+
+          <div class="carousel-item main-card">
+            <div class="card-content">
+              <h2>INTERESTED TO SEE HOW ATTACHMENT STYLES ARE?</h2>
+              <p>
+                See how different attachment styles play out in real-life dating
+                situations, from ______ to _____. Our short comic series brings
+                these experiences to life in a way that’s fun and relatable!
+              </p>
+              <a href="#" class="cta">READ OUR COMICS →</a>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card-content">
+              <h2>CURIOUS TO DIVE DEEPER INTO RELATIONSHIPS?</h2>
+              <p>
+                Ever wondered why you love the way that you do? Why you crave
+                closeness, overthink messages, or sometimes pull away when
+                things get too serious? This short quiz helps you uncover your
+                attachment style.
+              </p>
+              <a href="#" class="cta">COMING SOON →</a>
+            </div>
           </div>
         </div>
       </div>
@@ -255,7 +309,8 @@
           <div class="footer-col footer-social">
             <h3>STAY CONNECTED:</h3>
             <div class="social-icons">
-              <img src="assets/instagram.svg" />
+              <img src="./assets/instagram.svg" />
+              <img src="./assets/tiktok.png" />
             </div>
           </div>
         </div>

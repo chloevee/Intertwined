@@ -1,3 +1,13 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const faqButtons = document.querySelectorAll(".faq-item");
+
+  faqButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+    });
+  });
+});
+
 const slides = document.getElementById("slides");
 const phoneScreen = document.getElementById("phoneScreen");
 const descriptions = document.querySelectorAll(".person-description");

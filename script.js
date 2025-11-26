@@ -1,5 +1,5 @@
 //NAV BAR
-fetch("/partials/nav.html")
+fetch("partials/nav.html")
   .then((res) => res.text())
   .then((data) => {
     document.getElementById("nav-placeholder").innerHTML = data;
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //FOOTER
-fetch("/partials/footer.html")
+fetch("partials/footer.html")
   .then((res) => res.text())
   .then((data) => {
     document.getElementById("footer-placeholder").innerHTML = data;
@@ -111,3 +111,4 @@ phoneScreen.addEventListener("touchend", (e) => {
 phoneScreen.addEventListener("click", () => {
   showSlide((currentIndex + 1) % totalSlides);
 });
+

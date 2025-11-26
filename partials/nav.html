@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Intertwined</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- INLINE CSS HERE -->
+    <style>
+      /* -------------------- */
+      /*      NAV BAR         */
+      /* -------------------- */
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 100px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        font-family: "Krona One", sans-serif;
+      }
+
+      .nav-left,
+      .nav-right {
+        display: flex;
+        gap: 7rem;
+        list-style: none;
+      }
+
+      .nav-left a,
+      .nav-right a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 1px;
+      }
+
+      .nav-logo img {
+        height: 100px;
+      }
+
+      /* -------------------- */
+      /*    DROPDOWN MENU     */
+      /* -------------------- */
+
+      .dropdown-parent {
+        position: relative;
+      }
+
+      .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #77204a;
+        padding: 15px 0;
+        list-style: none;
+        border-radius: 12px;
+        min-width: 220px;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: 0.25s ease;
+        z-index: 999;
+      }
+
+      .dropdown li a {
+        display: block;
+        padding: 10px 20px;
+        color: white;
+        font-size: 16px;
+        letter-spacing: 1px;
+        text-decoration: none;
+      }
+
+      .dropdown li a:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .dropdown-parent:hover .dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    </style>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&family=Lexend+Tera:wght@100..900&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav">
+        <ul class="nav-left">
+          <li class="dropdown-parent">
+            <a href="about.html">ABOUT US</a>
+          </li>
+
+          <li class="dropdown-parent">
+            <a href="#">FINDINGS</a>
+            <ul class="dropdown">
+              <li><a href="findings.html">Findings Overview</a></li>
+              <li><a href="#">Infographics</a></li>
+              <li><a href="#">Attachment Styles</a></li>
+              <li><a href="#">Tips / Advices</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="nav-logo">
+          <a href="index.html">
+            <img src="assets/logo 2.png" alt="Intertwined Logo" />
+          </a>
+        </div>
+
+        <ul class="nav-right">
+          <li class="dropdown-parent">
+            <a href="#">ENTERTAINMENT</a>
+            <ul class="dropdown">
+              <li><a href="#">Personal Quiz</a></li>
+              <li><a href="comicshome.html">Comics</a></li>
+            </ul>
+          </li>
+
+          <li><a href="index.html#FAQs">FAQ</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>

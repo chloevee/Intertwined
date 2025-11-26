@@ -1,3 +1,11 @@
+//NAV BAR
+fetch("/partials/nav.html")
+  .then((res) => res.text())
+  .then((data) => {
+    document.getElementById("nav-placeholder").innerHTML = data;
+  });
+//END OF NAV
+
 document.addEventListener("DOMContentLoaded", function () {
   const faqButtons = document.querySelectorAll(".faq-item");
 
@@ -7,6 +15,37 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+//FOOTER
+fetch("/partials/footer.html")
+  .then((res) => res.text())
+  .then((data) => {
+    document.getElementById("footer-placeholder").innerHTML = data;
+  });
+//END OF FOOTER
+
+//MODAL
+(function () {
+  const section = document.querySelector(".section-two");
+  if (!section) return;
+
+  const characterButtons = section.querySelectorAll(".character-card");
+  const infoBlocks = section.querySelectorAll(".character-info");
+
+  characterButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const targetId = btn.getAttribute("data-target");
+
+      characterButtons.forEach((b) => b.classList.remove("active-card"));
+      btn.classList.add("active-card");
+
+      infoBlocks.forEach((block) => {
+        block.classList.toggle("active-info", block.id === targetId);
+      });
+    });
+  });
+})();
+//END OF MODAL
 
 const slides = document.getElementById("slides");
 const phoneScreen = document.getElementById("phoneScreen");
@@ -32,7 +71,6 @@ function showSlide(index) {
   });
 }
 
-// Basic swipe handling
 let startX = 0;
 let isSwiping = false;
 
@@ -46,7 +84,6 @@ phoneScreen.addEventListener(
   "touchmove",
   (e) => {
     if (!isSwiping) return;
-    // Prevent vertical scroll from feeling weird if swipe is mostly horizontal
     const deltaX = e.touches[0].clientX - startX;
     if (Math.abs(deltaX) > 10) {
       e.preventDefault();
@@ -62,12 +99,10 @@ phoneScreen.addEventListener("touchend", (e) => {
   const endX = e.changedTouches[0].clientX;
   const diff = endX - startX;
 
-  const threshold = 50; // px needed to trigger swipe
+  const threshold = 50;
   if (diff > threshold) {
-    // swipe right -> previous
     showSlide(currentIndex - 1);
   } else if (diff < -threshold) {
-    // swipe left -> next
     showSlide(currentIndex + 1);
   }
 });

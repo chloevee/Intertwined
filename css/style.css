@@ -24,12 +24,10 @@ body {
   align-items: center;
   padding: 10px 100px;
   width: 100%;
-  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   font-family: Krona One;
-  background: linear-gradient(to bottom, #77204a, rgba(255, 94, 169, 0));
 }
 
 .nav-left,
@@ -164,25 +162,26 @@ body {
 
 /*-----SECTION 3-----*/
 .section-three {
-  display: flex;
-  justify-content: center;
-  padding: 50px 20px;
+  background-color: #caef97;
   height: 100vh;
-  background: #caef97;
-}
-
-.section-three-card {
-  background: #caef97;
-  width: 100%;
   display: flex;
-  gap: 60px;
-  padding: 60px;
-  border-radius: 30px;
+  justify-content: flex-start;
   align-items: center;
+  padding: 0 40px;
+}
+.section-three-content {
+  width: 55rem;
+  font-size: 25px;
   color: #77204a;
+  margin-left: 50px;
+  margin-bottom: 35px;
+}
+.section-three-content p {
+  margin-bottom: 35px;
 }
 .section-three .more-link {
   color: #77204a;
+  font-size: 20px;
 }
 /*-----END OF SECTION 3-----*/
 

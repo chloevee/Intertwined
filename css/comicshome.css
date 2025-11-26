@@ -1,0 +1,288 @@
+:root {
+  --maroon: #77204a;
+  --pink: #f19ac5;
+  --lime: #caef97;
+  --brown: #40270d;
+  --cream: #f5eedc;
+  --sky: #6dcbcd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Krona One;
+}
+
+/*SECTION 1*/
+.section-one {
+  background-color: #40270d;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 40px;
+}
+.section-one-content {
+  width: 50rem;
+  line-height: 2.6rem;
+  font-size: 25px;
+  color: #f5eedc;
+  margin-left: 50px;
+}
+/*END OF SECTION 1*/
+
+/*SECTION 2*/
+.section-two {
+  background-color: #fff6dd; /* cream */
+  display: flex;
+  justify-content: center;
+}
+
+.section-two-content {
+  width: 100%;
+}
+
+.characters-banner {
+  width: 100%;
+  background-color: #f19ac5;
+  padding: 12px 0;
+  margin-bottom: 80px;
+}
+
+.characters-banner-text {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  font-family: "Krona One", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 0.2em;
+  color: #77204a;
+  text-transform: uppercase;
+}
+
+.characters-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.character-card {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.character-portrait {
+  width: 150px;
+  height: 260px;
+  border-radius: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+  border: 3px solid transparent;
+}
+.character-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills container without distortion */
+  border-radius: 6px; /* matches container corners */
+  display: block; /* removes unwanted gaps */
+}
+
+.character-card span {
+  font-family: "Krona One", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  color: #77204a;
+}
+
+.character-card:hover .character-portrait {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 26px rgba(219, 115, 141, 0.349);
+}
+
+.active-card .character-portrait {
+  border-color: #77204a;
+  transform: translateY(-4px);
+}
+
+.characters-info-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  height: 400px;
+  overflow-y: hidden;
+  margin-bottom: 80px;
+}
+
+.character-info {
+  background-color: #40270d;
+  color: #ffece3;
+  border-radius: 24px;
+  padding: 24px 28px 26px;
+  text-align: left;
+  display: none;
+  animation: popIn 0.25s ease-out;
+}
+
+.character-info h3 {
+  font-family: "Krona One", sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 0.16em;
+  margin-bottom: 4px;
+}
+
+.character-info .tagline {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f9b3d0;
+  margin-bottom: 14px;
+}
+
+.character-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 14px;
+  font-family: "Lexend", system-ui, sans-serif;
+}
+
+.character-info .visuals {
+  font-size: 1.2rem;
+  margin-top: 4px;
+  font-style: italic;
+  color: #ffe7f3;
+}
+
+.character-info.active-info {
+  display: block;
+}
+
+@keyframes popIn {
+  from {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/*END OF SECTION 2*/
+
+/*SECTION 3*/
+.section-three {
+  background-color: #f5eedc;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+.section-three-content {
+  width: 100%;
+}
+
+.comics-banner {
+  width: 100%;
+  background-color: #f19ac5;
+  padding: 12px 0;
+  margin-bottom: 100px;
+}
+
+.comics-banner-text {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  font-family: "Krona One", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 0.2em;
+  color: #77204a;
+  text-transform: uppercase;
+}
+
+/* COMICS GRID*/
+.comics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* COMIC CARD */
+.comic-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #40270d;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #ffece3;
+  box-shadow: 0 16px 32px rgba(80, 7, 25, 0.349);
+  transform: translateY(0);
+  transition: 0.18s ease;
+}
+
+.comic-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 38px rgba(219, 115, 141, 0.349);
+}
+
+.comic-thumbnail {
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+}
+
+.thumb-1 {
+  background-color: #caef97;
+}
+.thumb-2 {
+  background-color: #caef97;
+}
+.thumb-3 {
+  background-color: #caef97;
+}
+.thumb-4 {
+  background-color: #caef97;
+}
+
+/* BODY */
+.comic-body {
+  padding: 22px 20px 26px;
+  font-family: "Lexend", sans-serif;
+}
+
+.comic-tag {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 6px;
+}
+
+.comic-title {
+  font-family: "Krona One", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+}
+
+.comic-desc {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.comic-link {
+  font-size: 0.9rem;
+  color: #f9b3d0;
+  font-weight: 600;
+}

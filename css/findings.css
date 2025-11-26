@@ -1,0 +1,34 @@
+:root {
+  --maroon: #77204a;
+  --pink: #f19ac5;
+  --lime: #caef97;
+  --brown: #40270d;
+  --cream: #f5eedc;
+  --sky: #6dcbcd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Krona One;
+}
+/*-----SECTION 1-----*/
+.section-one {
+  background-color: #6dcbcd;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 40px;
+}
+.section-one-content {
+  width: 55rem;
+  font-size: 25px;
+  color: #40270d;
+  margin-left: 50px;
+}
+/*-----END OF SECTION 1-----*/

@@ -1,0 +1,139 @@
+:root {
+  --maroon: #77204a;
+  --pink: #f19ac5;
+  --lime: #caef97;
+  --brown: #40270d;
+  --cream: #f5eedc;
+  --sky: #6dcbcd;
+}
+* {
+  box-sizing: border-box;
+}
+
+body.intertwined-body {
+  background-color: var(--maroon);
+  color: var(--brown);
+}
+
+/* PRELOADER FULLSCREEN WRAPPER */
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: #f19ac5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.6s ease;
+}
+
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  color: #77204a;
+  background: radial-gradient(circle at 60% 65%, currentColor 62%, #0000 65%)
+      top left,
+    radial-gradient(circle at 40% 65%, currentColor 62%, #0000 65%) top right,
+    linear-gradient(to bottom left, currentColor 42%, #0000 43%) bottom left,
+    linear-gradient(to bottom right, currentColor 42%, #0000 43%) bottom right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  opacity: 0.4;
+  animation: l3 1s infinite;
+}
+
+@keyframes l3 {
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* PAGE WRAPPER */
+.references-page {
+  width: 90%;
+  margin: 0 auto;
+  padding: 140px 0 4rem;
+}
+
+/* SECTION + CARD */
+.references-section {
+  display: flex;
+  justify-content: center;
+}
+
+.references-card {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--pink);
+  border-radius: 2.5rem;
+  padding: 3rem clamp(2rem, 4vw, 3.25rem);
+  box-shadow: 0 14px 0 rgba(0, 0, 0, 0.16);
+  color: var(--brown);
+}
+
+/* HEADING AREA */
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0 0 0.6rem;
+  opacity: 0.9;
+  font-family: "Urbane";
+}
+
+.references-card h1 {
+  font-family: "KensingtonBlack";
+  font-size: 4rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 1.2rem;
+}
+
+.intro {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  max-width: 40rem;
+  margin: 0 0 1.8rem;
+  font-family: "Urbane";
+}
+
+/* REFERENCES LIST */
+.references-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reference-item {
+  font-family: "Urbane";
+  font-size: 0.9rem;
+  line-height: 1.7;
+  padding-left: 1.5rem;
+  text-indent: -1.5rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.reference-item em {
+  font-style: italic;
+}
+
+/* RESPONSIVE */
+@media (max-width: 410px) {
+  .references-card h1 {
+    font-size: 3rem;
+  }
+}

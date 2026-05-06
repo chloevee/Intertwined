@@ -1,0 +1,629 @@
+:root {
+  --maroon: #77204a;
+  --pink: #f19ac5;
+  --lime: #caef97;
+  --brown: #40270d;
+  --cream: #f5eedc;
+  --sky: #6dcbcd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #77204a;
+}
+
+/* PRELOADER FULLSCREEN WRAPPER */
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: #f19ac5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.6s ease;
+}
+
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  color: #77204a;
+  background: radial-gradient(circle at 60% 65%, currentColor 62%, #0000 65%)
+      top left,
+    radial-gradient(circle at 40% 65%, currentColor 62%, #0000 65%) top right,
+    linear-gradient(to bottom left, currentColor 42%, #0000 43%) bottom left,
+    linear-gradient(to bottom right, currentColor 42%, #0000 43%) bottom right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  opacity: 0.4;
+  animation: l3 1s infinite;
+}
+
+@keyframes l3 {
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+/*-----SECTION 1-----*/
+.section-one {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.section-one img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/*-----END OF SECTION 1-----*/
+
+/*-----SECTION 2-----*/
+.section-two {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* center card vertically */
+  padding: 10px 20px;
+  min-height: 100vh; /* was height: 100vh */
+}
+
+.section-two-card {
+  background: #f8a7c5;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 60px;
+  padding: 60px;
+  border-radius: 30px;
+  align-items: center;
+  color: #f5eedc;
+}
+
+.blob-shape {
+  display: flex;
+  flex-direction: column;
+}
+
+.blob-shape img {
+  width: 100%;
+  height: auto;
+}
+
+/* Text block */
+.section-two-content h2 {
+  font-size: 70px;
+  letter-spacing: 4px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  font-family: "Kensington";
+}
+
+.section-two-content p {
+  max-width: 800px;
+  line-height: 1.5;
+  font-size: 25px;
+  margin-bottom: 35px;
+  font-family: "Urbane";
+}
+
+.more-link {
+  color: #fff4e8;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 900;
+  font-family: "Urbane";
+}
+
+.more-link:hover {
+  color: #77204a;
+  opacity: 0.8;
+}
+/*-----END OF SECTION 2-----*/
+
+/*-----SECTION 3-----*/
+.section-three {
+  background-color: #caef97;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* no horizontal padding here */
+}
+
+.section-three img {
+  position: absolute;
+  height: 100%;
+  bottom: 0;
+  right: 0; /* stick to the right edge */
+  z-index: 0;
+}
+
+.section-three-content {
+  color: #77204a;
+  margin-left: 40px; /* replaces the old section padding */
+  margin-bottom: 35px;
+}
+.section-three-content h2 {
+  font-size: 80px;
+  margin-bottom: 35px;
+  font-family: "Kensington";
+}
+.section-three-content p {
+  margin-bottom: 35px;
+  line-height: 1.5;
+  font-size: 25px;
+  width: 700px;
+  font-family: "Urbane";
+}
+.section-three .more-link {
+  color: #77204a;
+  font-size: 20px;
+  font-family: "Urbane";
+  font-weight: 900;
+}
+/*-----END OF SECTION 3-----*/
+
+/*-----SECTION 4-----*/
+.section-four {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* center carousel vertically */
+  padding: 120px 20px;
+  background: #f5eedc;
+  min-height: 100vh; /* was height: 100vh */
+  box-sizing: border-box;
+}
+
+.section-four-card {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* keep your carousel + card styles as-is */
+.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+  justify-content: center;
+}
+
+.carousel-item {
+  flex: 1 1 320px;
+  max-width: 350px;
+  background-color: #77204a;
+  color: #f5eedc;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-content {
+  text-align: center;
+  padding: 40px 32px 50px;
+}
+
+.card-content h2 {
+  font-size: 35px;
+  line-height: 1.3;
+  margin-bottom: 30px;
+  font-family: "Kensington";
+}
+
+.card-content p {
+  font-family: "Urbane", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+/* CTA button */
+.cta {
+  font-size: 13px;
+  color: #f5eedc;
+  padding: 18px 36px;
+  border: 2px solid #f5eedc;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Urbane", system-ui, sans-serif;
+  font-weight: 900;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.cta:hover {
+  background-color: #f19ac5;
+  transform: scale(1.04);
+}
+/*-----END OF SECTION 4-----*/
+
+/*-----SECTION 5-----*/
+.section-five {
+  background: #3b1f11;
+  padding: 80px 0 150px;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-five img {
+  position: absolute;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+.section-five-card {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 70px;
+  overflow: hidden;
+}
+
+.section-five-content {
+  position: relative;
+  z-index: 1;
+  margin-left: auto;
+  max-width: 480px;
+  color: #fff7ec;
+}
+
+.section-five-content h2 {
+  font-size: 80px;
+  letter-spacing: 4px;
+  line-height: 1.1;
+  margin-bottom: 40px;
+  font-family: "Kensington", system-ui, sans-serif;
+}
+
+/* FAQ list */
+
+.faq-list {
+  margin-top: 10px;
+}
+.survey {
+  color: #caef97;
+}
+.faq-item {
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #fff7ec;
+  padding: 14px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff7ec;
+  font-family: "Urbane", system-ui, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.faq-item:focus {
+  outline: none;
+}
+
+.faq-question {
+  text-align: left;
+}
+
+.faq-icon {
+  font-size: 30px;
+  transition: transform 0.2s ease;
+}
+
+/* Hidden by default */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  font-family: "Urbane", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #fff7ec;
+}
+
+.faq-answer p {
+  margin: 10px 0 18px;
+}
+
+.faq-item.active + .faq-answer {
+  max-height: 500px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+/*-----END OF SECTION 3-----*/
+
+/* ========================================================= */
+/*                    RESPONSIVE FIXES                 */
+/* ========================================================= */
+
+@media (max-width: 960px) {
+  .section-one {
+    padding-top: 80px;
+    min-height: 50vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  .section-one img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* ---------------- SECTION 2 ---------------- */
+  .section-two {
+    padding: 40px 20px;
+    min-height: auto;
+  }
+  .blob-shape {
+    width: 50%;
+  }
+
+  .section-two-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 40px 30px;
+  }
+
+  .section-two-content h2 {
+    font-size: 4rem;
+  }
+
+  .section-two-content p {
+    font-size: 1.8rem;
+    max-width: 100%;
+  }
+  .section-two .more-link {
+    font-size: 1.6rem;
+  }
+
+  /* ---------------- SECTION 3 ---------------- */
+  .section-three {
+    background-color: #caef97;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    padding: 100px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-three img {
+    display: none;
+  }
+
+  .section-three-content {
+    color: #77204a;
+    margin: 0;
+    max-width: 650px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-three-content h2 {
+    font-size: 8rem;
+  }
+
+  .section-three-content p {
+    width: 100%;
+    font-size: 1.8rem;
+  }
+  .section-three .more-link {
+    font-size: 1.6rem;
+  }
+
+  /* ---------------- SECTION 4 ---------------- */
+  .section-four {
+    padding: 60px 20px;
+    min-height: auto;
+  }
+
+  .carousel {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .carousel-item {
+    max-width: 100%;
+  }
+
+  .card-content h2 {
+    font-size: 4rem;
+  }
+
+  .card-content p {
+    font-size: 1.82rem;
+  }
+
+  .cta {
+    padding: 14px 28px;
+    font-size: 1.5rem;
+  }
+
+  /* ---------------- SECTION 5 (FAQ) ---------------- */
+  .section-five-content {
+    margin: 0 auto;
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .section-five-card {
+    display: flex;
+    justify-content: center;
+  }
+  .section-five img {
+    display: none;
+  }
+
+  .faq-item {
+    font-size: 1.5rem;
+  }
+
+  .faq-answer {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    word-wrap: break-word;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 880px) {
+  .card-content h2 {
+    font-size: 3rem;
+  }
+  .card-content p {
+    font-size: 1.2rem;
+  }
+  .cta {
+    font-size: 1rem;
+  }
+  .section-five-content {
+    margin: 0;
+  }
+}
+
+@media (max-width: 660px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  h2 {
+    word-break: break-word;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* -------- SECTION 1 -------- */
+  .section-one {
+    min-height: 30vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  .section-one img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* -------- SECTION 2 -------- */
+  .section-two {
+    padding: 30px 15px;
+  }
+
+  .section-two-card {
+    padding: 30px 20px;
+    gap: 20px;
+    border-radius: 20px;
+  }
+
+  .section-two-content h2 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .section-two-content p {
+    font-size: 16px;
+  }
+
+  /* -------- SECTION 3 -------- */
+  .section-three {
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .section-three-content {
+    z-index: 2;
+    margin: 0;
+  }
+
+  .section-three-content h2 {
+    font-size: 4rem;
+  }
+
+  .section-three-content p {
+    font-size: 1.4rem;
+  }
+  /* -------- SECTION 4 -------- */
+  .section-four {
+    padding: 50px 15px;
+  }
+
+  .carousel {
+    gap: 30px;
+  }
+
+  .carousel-item {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
+  .card-content {
+    padding: 30px 20px;
+  }
+  .cta {
+    font-size: 1.3rem;
+  }
+  /* -------- SECTION 5 (FAQ) -------- */
+  .section-five {
+    padding: 60px 15px 90px;
+  }
+
+  .section-five-card {
+    padding: 30px 20px;
+  }
+
+  .section-five-content h2 {
+    font-size: 4rem;
+    line-height: 1.1;
+  }
+
+  .faq-item {
+    font-size: 15px;
+    padding: 12px 0;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+  }
+}

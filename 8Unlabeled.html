@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Unlabeled</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="./assets/purple_star.png" />
+    <link rel="stylesheet" href="css/comic-1.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&family=Lexend+Tera:wght@100..900&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js" defer></script>
+  <script src="comments.js" defer></script>
+
+  <body>
+    <!--LOADER-->
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+
+    <main class="comic-viewer">
+      <div class="comic-viewer-content">
+        <!-- HEADER INFO -->
+        <header class="comic-header">
+          <div class="comic-header-top">
+            <div class="comic-header-text">
+              <h1 class="comic-title">UNLABELED</h1>
+              <p class="comic-subtitle">
+                Desiring clarity in a world that avoids it. Felicity, despite
+                her nature, finally thought she found the one. But when they
+                refuses to name the relationship, she chooses herself and later
+                finds real love. Walking away isn’t losing, it can make space
+                for something better.
+              </p>
+            </div>
+
+            <!-- SHARE BUTTON -->
+            <button id="shareButton">
+              <img src="./assets/forward.png" alt="Share" class="share-btn" />
+            </button>
+          </div>
+
+          <a class="back-link" href="comicshome.html#Comics"
+            >← Back to comics</a
+          >
+        </header>
+
+        <section class="comic-pages two-column">
+          <div class="comic-row">
+            <img
+              src="comic_pages/Unlabeled/Page 1.png"
+              alt="Page 1"
+              class="comic-page"
+            />
+            <img
+              src="comic_pages/Unlabeled/Page 2.png"
+              alt="Page 2"
+              class="comic-page"
+            />
+          </div>
+
+          <div class="comic-row">
+            <img
+              src="comic_pages/Unlabeled/Page 3.png"
+              alt="Page 3"
+              class="comic-page"
+            />
+            <img
+              src="comic_pages/Unlabeled/Page 4.png"
+              alt="Page 4"
+              class="comic-page"
+            />
+          </div>
+
+          <p class="end-note">End of comic ✦ Thanks for reading!</p>
+        </section>
+        <div class="comic-audio">
+          <p class="audio-label">
+            Listen to what an experienced counselor has to say! ✦
+          </p>
+          <audio controls>
+            <source src="audios/UNLABELED.mp3" type="audio/mpeg" />
+            Your browser does not support audio.
+          </audio>
+        </div>
+        <div class="comments-wrapper">
+          <div class="comments-intro">
+            <h2 class="comments-heading">
+              Felicity chose clarity over confusion. Would you walk away from
+              someone who won’t define the relationship?
+            </h2>
+            <p class="comments-subtext">
+              Drop your thoughts below! Reactions, theories, and unhinged essays
+              are all welcome.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <section class="comments-section" data-page-id="8Unlabeled">
+      <h2 class="comments-title">COMMENTS</h2>
+
+      <form class="comment-form">
+        <div class="comment-field">
+          <label for="comment-name">Name (optional)</label>
+          <input
+            type="text"
+            id="comment-name"
+            name="name"
+            placeholder="Anonymous"
+          />
+        </div>
+
+        <div class="comment-field">
+          <label for="comment-body">Your comment</label>
+          <textarea
+            id="comment-body"
+            name="body"
+            rows="3"
+            placeholder="Be nice 😌"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="comment-submit">Post comment</button>
+        <p class="comment-status" aria-live="polite"></p>
+      </form>
+
+      <div class="comments-list"></div>
+    </section>
+  </body>
+</html>

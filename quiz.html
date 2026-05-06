@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Attachment Style Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="./assets/purple_star.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&family=Lexend+Tera:wght@100..900&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/quiz.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--LOADER-->
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+
+    <main class="quiz-page">
+      <div class="quiz-container">
+        <header class="quiz-header">
+          <a class="back-link" href="index.html#cards">← Back to Home</a>
+          <h1>Find Your Attachment Style</h1>
+          <p class="quiz-subtitle">
+            Read each statement carefully and rate how much you agree.
+          </p>
+          <!-- <p class="quiz-scale">
+            1 = Strongly Disagree | 2 = Disagree | 3 = Neutral | 4 = Agree | 5 =
+            Strongly Agree
+          </p> -->
+        </header>
+
+        <form id="attachmentQuiz" class="quiz-form">
+          <!-- Questions injected here -->
+        </form>
+
+        <button type="submit" form="attachmentQuiz" class="submit-btn">
+          See My Result!
+        </button>
+
+        <!-- UPDATED RESULT SECTION -->
+        <section id="resultSection" class="result hidden">
+          <h2>Your Attachment Style Result</h2>
+
+          <div class="result-layout">
+            <!-- LEFT -->
+            <div class="result-text">
+              <p id="resultStyle" class="result-style"></p>
+              <p id="resultDescription" class="result-description"></p>
+
+              <!-- CTA BLOCK -->
+              <div class="result-cta">
+                <p id="resultCtaText" class="result-cta-text"></p>
+
+                <div class="result-cta-actions">
+                  <!-- Update these hrefs to your real pages -->
+                  <a
+                    id="ctaComicsLink"
+                    class="cta-btn"
+                    href="comicshome.html#Comics"
+                  >
+                    Read the Comics
+                  </a>
+                  <a
+                    id="ctaInfographicsLink"
+                    class="cta-btn cta-btn--outline"
+                    href="findings.html"
+                  >
+                    View Infographics
+                  </a>
+                </div>
+              </div>
+
+              <div id="scoreBreakdown" class="score-breakdown"></div>
+
+              <button id="retakeBtn" class="retake-btn">Retake Quiz</button>
+            </div>
+
+            <!-- RIGHT -->
+            <!-- <div class="result-character" aria-hidden="true">
+              <img
+                id="resultCharacterImg"
+                class="result-character-img hidden"
+                src=""
+                alt=""
+              />
+            </div>-->
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="./quiz.js"></script>
+  </body>
+</html>

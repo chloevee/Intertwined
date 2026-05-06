@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="./assets/purple_star.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&family=Lexend+Tera:wght@100..900&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--LOADER-->
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+
+    <header>
+      <nav class="nav">
+        <!-- LEFT -->
+        <ul class="nav-left">
+          <li class="dropdown-parent">
+            <a href="about.html">ABOUT US</a>
+          </li>
+
+          <li class="dropdown-parent">
+            <a href="#">RESOURCES</a>
+            <ul class="dropdown">
+              <li><a href="findings.html">Findings</a></li>
+              <li><a href="helplines.html">Helplines</a></li>
+              <li><a href="reference.html">Reference List</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- LOGO (center on desktop, left on mobile via CSS order) -->
+        <div class="nav-logo">
+          <a href="index.html">
+            <img src="assets/logosvg.svg" alt="Intertwined Logo" />
+          </a>
+        </div>
+
+        <!-- RIGHT -->
+        <ul class="nav-right">
+          <li class="dropdown-parent">
+            <a href="#">ENTERTAINMENT</a>
+            <ul class="dropdown">
+              <li><a href="quiz.html">Personal Quiz</a></li>
+              <li><a href="comicshome.html">Comics</a></li>
+            </ul>
+          </li>
+
+          <li><a href="index.html#FAQs">FAQ</a></li>
+        </ul>
+
+        <!-- Hamburger (placeholder icon) -->
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <img src="./assets/menu-icon.svg" />
+        </button>
+      </nav>
+    </header>
+
+    <section class="section-one">
+      <div class="section-one-content">
+        <p>
+          Intertwined is a collective that aims to shed light on the realities
+          of digital courtship in the Philippines. By exploring how dating apps
+          shape the way Filipino youth experience romance and relationships, we
+          hope to spark meaningful conversations and not only inform, but also
+          encourage self-reflection and awareness among the youth and their
+          parents.
+        </p>
+      </div>
+      <img src="assets/BG1_brown.svg" />
+    </section>
+
+    <section class="section-two" id="mis-vis">
+      <div class="section-two-card">
+        <div class="mv-item">
+          <img src="assets/mission.PNG" />
+          <h2>MISSION</h2>
+          <div class="mv-line"></div>
+          <p>
+            Our mission is to empower Filipino youth and their parents to
+            understand, reflect on, and navigate digital courtship in a safe and
+            healthy environment.
+          </p>
+        </div>
+
+        <div class="mv-item">
+          <img src="assets/vision.PNG" />
+          <h2>VISION</h2>
+          <div class="mv-line"></div>
+          <p>
+            Our vision is to create a community that navigates digital courtship
+            with empathy, understanding, and cultural awareness.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-three">
+      <div class="section-three-content">
+        <div class="phone-wrapper">
+          <div class="phone">
+            <div class="phone-screen" id="phoneScreen">
+              <div class="slides" id="slides">
+                <div class="slide">
+                  <img src="./assets/pic1.JPG" alt="Person 1" />
+                </div>
+                <div class="slide">
+                  <img src="./assets/pic2.jpg" alt="Person 2" />
+                </div>
+                <div class="slide">
+                  <img src="./assets/pic3.JPG" alt="Person 3" />
+                </div>
+                <div class="slide">
+                  <img src="./assets/pic4.jpg" alt="Person 4" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="details">
+          <div class="heading">
+            <h2>MEET THE TEAM</h2>
+            <p class="subtitle">
+              Click on the phone to see the minds and hearts behind
+              <i>Intertwined</i>.
+            </p>
+          </div>
+
+          <div class="person-description active" data-index="0">
+            <h3>CHLOE VENICE LEE</h3>
+            <p class="person-role">WEB DESIGNER/DEVELOPER</p>
+            <p class="person-bio">
+              A multimedia arts student driven by a love for web design. Vee
+              aims to deliver a clean and enjoyable website experience.
+            </p>
+            <div class="tags">
+              <span class="tag">Figma</span>
+              <span class="tag">Procreate</span>
+              <span class="tag">Visual Studio Code</span>
+            </div>
+          </div>
+
+          <div class="person-description" data-index="1">
+            <h3>JESSICA KATRINE GAW</h3>
+            <p class="person-role">LAYOUT DESIGNER/MOTION GRAPHICS ARTIST</p>
+            <p class="person-bio">
+              A multimedia artist who specializes in layout design and motion
+              graphics. She hopes to captivate you through clean visuals and
+              dynamic movement.
+            </p>
+            <div class="tags">
+              <span class="tag">Illustrator</span>
+              <span class="tag">After Effects</span>
+              <span class="tag">Blender</span>
+            </div>
+          </div>
+
+          <div class="person-description" data-index="2">
+            <h3>ASHANTI KATE LEONARDO</h3>
+            <p class="person-role">ILLUSTRATOR</p>
+            <p class="person-bio">
+              A Multimedia artist with a strong passion for illustrating. She
+              hopes to entertain you with her visual storytelling skills.
+            </p>
+            <div class="tags">
+              <span class="tag">Clip Studio Paint</span>
+              <span class="tag">Procreate</span>
+              <span class="tag">Photoshop</span>
+            </div>
+          </div>
+
+          <div class="person-description" data-index="3">
+            <h3>JOAQUIN LORENZO AGRAVIO</h3>
+            <p class="person-role">WRITER/AUDIO EDITOR</p>
+            <p class="person-bio">
+              A Multimedia artist who tells stories for a living and brings good
+              vibes for free. Here to bring optimism and maybe steal your
+              hoodie.
+            </p>
+            <div class="tags">
+              <span class="tag">Premiere Pro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-four">
+      <div class="section-four-card"></div>
+    </section>
+
+    <!--FAQ-->
+    <section class="section-five">
+      <div class="section-five-card">
+        <div class="section-five-content"></div>
+      </div>
+    </section>
+    <!--END OF FAQ-->
+    <!--FOOTER-->
+    <div id="footer-placeholder"></div>
+    <!--END OF FOOTER-->
+  </body>
+  <script src="script.js"></script>
+</html>

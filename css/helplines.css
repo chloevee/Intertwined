@@ -1,0 +1,245 @@
+:root {
+  --maroon: #77204a;
+  --pink: #f19ac5;
+  --lime: #caef97;
+  --brown: #40270d;
+  --cream: #f5eedc;
+  --sky: #6dcbcd;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body.intertwined-body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--maroon);
+  color: var(--brown);
+}
+/* PRELOADER FULLSCREEN WRAPPER */
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: #f19ac5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.6s ease;
+}
+
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  color: #77204a;
+  background: radial-gradient(circle at 60% 65%, currentColor 62%, #0000 65%)
+      top left,
+    radial-gradient(circle at 40% 65%, currentColor 62%, #0000 65%) top right,
+    linear-gradient(to bottom left, currentColor 42%, #0000 43%) bottom left,
+    linear-gradient(to bottom right, currentColor 42%, #0000 43%) bottom right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  opacity: 0.4;
+  animation: l3 1s infinite;
+}
+
+@keyframes l3 {
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+/* PAGE WRAPPER */
+.helplines-page {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 140px;
+  width: 90%;
+}
+
+.helplines-section {
+  padding-bottom: 3rem;
+}
+
+.helpline-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+/* CARDS */
+.helpline-card {
+  background-color: var(--sky);
+  border-radius: 2rem;
+  padding: 1.8rem 1.6rem 1.6rem;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  color: var(--brown);
+}
+
+.urgent-card {
+  background-color: var(--lime);
+  color: var(--brown);
+}
+
+.soft-card {
+  background-color: var(--pink);
+  color: var(--brown);
+}
+
+.card-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  font-family: "Urbane";
+}
+
+.helpline-card h3 {
+  font-size: 3rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: "KensingtonBlack";
+}
+
+.helpline-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: "Urbane";
+}
+
+.service-name {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.service-detail {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.small-note {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Urbane";
+}
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .helplines-page {
+    padding-top: 130px;
+    padding-inline: 1.5rem;
+  }
+
+  .helpline-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .helpline-card {
+    padding: 1.5rem 1.4rem 1.4rem;
+  }
+
+  .helpline-card h3 {
+    font-size: 2.4rem;
+  }
+
+  .service-name {
+    font-size: 1.05rem;
+  }
+
+  .service-detail {
+    font-size: 0.9rem;
+  }
+
+  .small-note {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 720px) {
+  .helpline-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+@media (max-width: 430px) {
+  .helplines-page {
+    padding-top: 120px;
+    padding-inline: 1.1rem;
+  }
+
+  .helpline-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .helpline-card {
+    padding: 1.3rem 1.2rem 1.2rem;
+    border-radius: 1.5rem;
+  }
+
+  .card-label {
+    font-size: 0.7rem;
+  }
+
+  .helpline-card h3 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
+  .service-name {
+    font-size: 0.98rem;
+  }
+
+  .service-detail {
+    font-size: 0.85rem;
+  }
+
+  .small-note {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .helplines-page {
+    padding-inline: 0.9rem;
+  }
+
+  .helpline-card {
+    padding: 1.1rem 1rem 1rem;
+  }
+
+  .helpline-card h3 {
+    font-size: 1.7rem;
+  }
+
+  .service-name {
+    font-size: 0.92rem;
+  }
+
+  .service-detail {
+    font-size: 0.8rem;
+  }
+
+  .small-note {
+    font-size: 0.85rem;
+  }
+}
